@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PIN ART</title>
+  <style>
+    /* 기본 리셋 */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Arial', sans-serif;
+      color: #333;
+      line-height: 1.6;
+    }
+    /* 고정 네비게이션 바 */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(255,255,255,0.95);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      z-index: 100;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    header .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    header nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #333;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+    header nav a:hover {
+      color: #0073e6;
+    }
+    /* 히어로 섹션 */
+    .hero {
+      height: 100vh;
+      /* ▼ 이 부분을 사용자 제공 이미지로 변경합니다. ▼ */
+      background: url('로고2.jpg') center center/cover no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      text-align: center;
+      color: #fff;
+    }
+    /* 필요하다면 아래 오버레이는 제거하거나 조정 가능합니다
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+    }
+    */
+    .hero-content {
+      position: relative;
+      z-index: 1; /* 오버레이 위에 표시 */
+      padding: 20px;
+    }
+    .hero-content h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+    .hero-content p {
+      font-size: 24px;
+    }
+    /* 섹션 스타일 */
+    .section {
+      padding: 80px 40px;
+      text-align: center;
+    }
+    .section h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+    .section p {
+      font-size: 18px;
+      max-width: 800px;
+      margin: 0 auto 20px;
+    }
+    /* Gallery 섹션 스타일 */
+    .gallery-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .gallery-container img {
+      max-width: 100%;
+      height: auto;
+      border: 5px solid #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    /* 푸터 */
+    footer {
+      background: #f4f4f4;
+      text-align: center;
+      padding: 20px;
+      font-size: 16px;
+    }
+    /* 반응형 디자인 */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+      }
+      header nav a {
+        margin: 10px 0 0 0;
+      }
+      .hero-content h1 {
+        font-size: 36px;
+      }
+      .hero-content p {
+        font-size: 18px;
+      }
+      .gallery-container {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- 네비게이션 바 -->
+  <header>
+    <div class="logo">PIN ART</div>
+    <nav>
+      <a href="#hero">Home</a>
+      <a href="#about">About</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+  
+  <!-- 히어로 섹션 -->
+  <section id="hero" class="hero">
+    <div class="hero-content">
+    
+    </div>
+  </section>
+  
+  <!-- About 섹션 -->
+  <section id="about" class="section">
+    <h2>About PIN ART</h2>
+    <p>
+      PIN ART는 예체능 학원의 다양한 프로그램과 이벤트를 소개합니다. 예술과 체육, 창의력을 결합하여 여러분의 잠재력을 이끌어내는 공간입니다.
+    </p>
+  </section>
+  
+  <!-- Gallery 섹션 (사진 삽입) -->
+  <section id="gallery" class="section">
+    <h2>Gallery</h2>
+    <p>아래는 PIN ART의 다양한 모습을 담은 사진들입니다.</p>
+    <div class="gallery-container">
+      <img src="https://source.unsplash.com/random/800x600/?art,1" alt="예술 사진 1">
+      <img src="https://source.unsplash.com/random/800x600/?art,2" alt="예술 사진 2">
+      <img src="https://source.unsplash.com/random/800x600/?art,3" alt="예술 사진 3">
+    </div>
+  </section>
+  
+  <!-- Contact 섹션 -->
+  <section id="contact" class="section">
+    <h2>Contact Us</h2>
+    <p>문의 사항은 아래 이메일로 연락해 주세요.</p>
+    <p>
+      <a href="mailto:gwg03017@naver.com">gwg03017@naver.com</a>
+    </p>
+  </section>
+  
+  <!-- 푸터 -->
+  <footer>
+    <p>&copy; 2025 PIN ART. All rights reserved.</p>
+  </footer>
+</body>
+</html>
